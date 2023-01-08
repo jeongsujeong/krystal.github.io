@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap'); 
+body{font-family: 'Poppins', sans-serif;margin:0;padding:0;}
+button{border:0;outline: 0;}
+h1,h2{margin:0;padding:0}
+ul,li{list-style-type:none;padding: 0;margin: 0;}
+
+.hidden{
+    display: none !important;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+form{
+    position: relative;
+    z-index: 1;
+    
+}
+
+#widget{
+    position: relative;
+    z-index: 1;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#login-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+#login-form{width: 400px;}
+#login-form input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
+    outline: none;
+    border: 0;
+    box-sizing: border-box;
+}
+#login-form button{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    margin-top: 17px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.95);
+    border: 1px solid white;
+    transition: 0.3s all ease-in-out;
+}
+
+#login-form button:hover{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.85);
+}
+
+#weather{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+#weather span:first-child:before{
+    content:'';
+    width:20px;
+    height: 20px;
+    background: url(img/location.png);
+    display: inline-block;
+    background-size: cover;
+}
+
+#greeting{
+    font-weight: 200;
+    padding: 30px 40px;
+    font-size: 26px;
+}
+
+#clock{
+    width: 50%;
+    text-align: center;
+    font-weight: 200;
+    font-size: 70px;
+    color: #fff;
+    padding-top: 16%;
+    letter-spacing: 10px;
+    text-shadow: 0 0 9px black;
+    transform: translateY(0px);
+    animation: clockMove .5s ease-in-out;
+}
+@keyframes clockMove{
+    from{
+        transform: translateY(-40px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+#quotes{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+#quotes span{display: block;}
+#quotes span:last-child:before{
+    content: '-';
+    margin-left: 10px;
+}
+#quotes:hover{
+    font-size:13px;
+    
+}
+
+.inner-wrap{
+    position: absolute;
+    width: 45%;
+    height: 90vh;
+    top: 0;
+    right:0;
+    background: rgb(255 255 255 / 60%);
+    margin: 5vh;
+    border-radius: 15px;
+    animation: move 1s ease-in-out;
+}
+@keyframes move{
+    from{
+        right:-40%;
+    }
+    to{
+        right:0;
+    }
+}
+
+.todo-wrap{
+    width: 60%;
+    margin: 20vh auto 0;
+}
+
+#todo-form{
+    width: 100%;
+}
+
+#todo-form input{
+    width: 100%;
+    font-size: 19px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#todo-form input:focus{
+    outline: none;
+}
+#todo-list{
+    margin-top:20px;
+}
+#todo-list li{
+    padding: 5px 0;
+    border-bottom: 1px solid #000;
+    position: relative;
+    box-sizing: border-box;
+}
+#todo-list button{
+    position: absolute;
+    right: 0;
+    top: 9px;
+    cursor: pointer;
+    background: transparent;
+    color: #a70000;
+    font-weight: bold;
+}
